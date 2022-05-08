@@ -32,7 +32,7 @@ const Footer = () => {
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",
-          justifyContent: () => (dWidth >= 400 ? "space-between" : "center"),
+          justifyContent: () => (dWidth > 425 ? "space-between" : "center"),
         }}
       >
         <Box>

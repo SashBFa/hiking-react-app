@@ -8,13 +8,16 @@ import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import { CssBaseline } from "@mui/material";
+import Create from "./pages/Create";
+import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
 
 function App() {
   const [toggleDark, settoggleDark] = useState(true);
   const theme = createTheme({
     palette: {
       primary: {
-        main: green[800],
+        main: yellow.A400,
       },
       secondary: {
         main: yellow.A700,
@@ -49,6 +52,9 @@ function App() {
           <Header toggleDark={toggleDark} settoggleDark={settoggleDark} />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/about" element={<About />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
           </Routes>
