@@ -1,10 +1,14 @@
+import { Container } from "@mui/material";
 import React from "react";
+import Carousel from "../components/Carousel";
+import Display from "../components/Display";
 
 const Home = () => {
   return (
-    <div className="home">
-      <h1>Home</h1>
-    </div>
+    <Container maxWidth="xl">
+      <Carousel />
+      <Display />
+    </Container>
   );
 };
 

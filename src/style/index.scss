@@ -1,0 +1,37 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffea00 !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ffea00 !important;
+}
+.swiper {
+  padding: 2rem 0rem !important;
+  margin: 0 5rem !important;
+}
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.carousel {
+  max-height: 350px !important;
+  margin-top: 2rem !important;
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateY(-50%);
+  }
+}
