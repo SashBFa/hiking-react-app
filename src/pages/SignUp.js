@@ -5,7 +5,6 @@ import {
   Button,
   Checkbox,
   Container,
-  CssBaseline,
   FormControlLabel,
   Grid,
   Link,
@@ -26,7 +25,6 @@ const SignUp = () => {
   };
   return (
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
       <Box
         sx={{
           marginTop: 8,

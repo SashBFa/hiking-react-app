@@ -4,57 +4,60 @@ import {
   Instagram,
   Twitter,
 } from "@mui/icons-material";
-import {
-  CssBaseline,
-  Typography,
-  Link,
-  IconButton,
-  Box,
-  Container,
-} from "@mui/material";
-import React from "react";
+import { Typography, Link, IconButton, Box, Container } from "@mui/material";
+import React, { useRef } from "react";
+import GetDim from "./GetDim";
 
 const Footer = () => {
+  const ref = useRef();
+  const { dWidth } = GetDim(ref);
   return (
-    <footer className="footer">
-      <CssBaseline />
-      <Box
-        component="footer"
+    <Box
+      component="footer"
+      sx={{
+        py: 3,
+        px: 2,
+        mt: "auto",
+        backgroundColor: (theme) =>
+          theme.palette.mode === "light"
+            ? theme.palette.grey[200]
+            : theme.palette.grey[800],
+      }}
+    >
+      <Container
+        maxWidth="xl"
+        ref={ref}
         sx={{
-          py: 3,
-          px: 2,
-          mt: "auto",
-          backgroundColor: (theme) =>
-            theme.palette.mode === "light"
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
+          margin: "0 auto",
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: () => (dWidth >= 400 ? "space-between" : "center"),
         }}
       >
-        <Container maxWidth="xl" sx={{ display: "flex", alignItems: "center" }}>
-          <Box sx={{ flexGrow: 1 }}>
-            <IconButton>
-              <FacebookOutlined color="primary" fontSize="large" />
-            </IconButton>
-            <IconButton>
-              <Instagram color="primary" fontSize="large" />
-            </IconButton>
-            <IconButton>
-              <Twitter color="primary" fontSize="large" />
-            </IconButton>
-            <IconButton>
-              <GitHub color="primary" fontSize="large" />
-            </IconButton>
-          </Box>
-          <Typography variant="body1" color="default">
-            Copyright ©{" "}
-            <Link color="inherit" href="/">
-              Hiking App
-            </Link>
-            {" " + new Date().getFullYear() + "."}
-          </Typography>
-        </Container>
-      </Box>
-    </footer>
+        <Box>
+          <IconButton>
+            <FacebookOutlined color="primary" fontSize="large" />
+          </IconButton>
+          <IconButton>
+            <Instagram color="primary" fontSize="large" />
+          </IconButton>
+          <IconButton>
+            <Twitter color="primary" fontSize="large" />
+          </IconButton>
+          <IconButton>
+            <GitHub color="primary" fontSize="large" />
+          </IconButton>
+        </Box>
+        <Typography variant="body1" color="default">
+          Copyright ©{" "}
+          <Link color="inherit" href="/">
+            Hiking App
+          </Link>
+          {" " + new Date().getFullYear() + "."}
+        </Typography>
+      </Container>
+    </Box>
   );
 };
 

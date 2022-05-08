@@ -1,10 +1,4 @@
-import {
-  AppBar,
-  CssBaseline,
-  Switch,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Switch, Toolbar, Typography } from "@mui/material";
 import React from "react";
 
 const Header = ({ toggleDark, settoggleDark }) => {
@@ -13,7 +7,6 @@ const Header = ({ toggleDark, settoggleDark }) => {
   };
   return (
     <header className="header">
-      <CssBaseline />
       <AppBar
         position="static"
         elevation={0}
